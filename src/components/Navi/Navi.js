@@ -12,9 +12,9 @@ const Navi = () => {
                             col-sm-12
                             col-xs-12">
                         <ul className="menu">
-                            <li><Link to="/aplications/QLpage">Quản Lý</Link></li>
-                            <li><Link to="/aplications/may-tinh">Máy Tính</Link></li>
-                            <li><Link to="/aplications/ca-ro">Caro</Link></li>
+                            <li><Link to="/applications/QLpage">Quản Lý</Link></li>
+                            <li><Link to="/applications/may-tinh">Máy Tính</Link></li>
+                            <li><Link to="/applications/ca-ro">Caro</Link></li>
                         </ul>
                     </div>
                 </div>
