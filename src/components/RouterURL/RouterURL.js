@@ -19,7 +19,7 @@ const RouterURL = () => {
                     <Caro />
                 </Route>
                 <Route>
-                    <QLpage />
+                    <QLpage path="/applications" />
                 </Route>
             </Switch>
 
