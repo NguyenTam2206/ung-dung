@@ -1,0 +1,62 @@
+[
+    {
+        "id"        : 1,
+        "username"  : "nguyentam2206",
+        "password"  : "123456",
+        "level"     : 1
+    },
+    {
+        "id"        : 2,
+        "username"  : "nguyentam0622",
+        "password"  : "123456",
+        "level"     : 2
+    },
+    {
+        "id"        : 3,
+        "username"  : "thientam123",
+        "password"  : "123456",
+        "level"     : 1
+    },
+    {
+        "id"        : 4,
+        "username"  : "minhphuong123",
+        "password"  : "123456",
+        "level"     : 2
+    },
+    {
+        "id"        : 5,
+        "username"  : "minhthu123",
+        "password"  : "123456",
+        "level"     : 1
+    },
+    {
+        "id"        : 6,
+        "username"  : "conheocon123",
+        "password"  : "123456",
+        "level"     : 2
+    },
+    {
+        "id"        : 7,
+        "username"  : "conkhicon123",
+        "password"  : "123456",
+        "level"     : 1
+    },
+    {
+        "id"        : 8,
+        "username"  : "conchocon123",
+        "password"  : "123456",
+        "level"     : 2
+    },
+    {
+        "id"        : 9,
+        "username"  : "conheogia123",
+        "password"  : "123456",
+        "level"     : 2
+    },
+    {
+        "id"        : 10,
+        "username"  : "conkhigia",
+        "password"  : "123456",
+        "level"     : 1
+    }
+]

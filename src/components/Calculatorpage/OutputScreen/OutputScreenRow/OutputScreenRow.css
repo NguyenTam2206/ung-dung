@@ -1,0 +1,23 @@
+.screen-row input{
+    width: 300px;
+    background: #323232;
+    border: 0px;
+    color: #ffffff;
+    padding: 10px;
+    text-align: right;
+}
+input[type="button"]{
+    width: 100px;
+    background: #d6d6d6;
+    border: 1px solid #222;
+    padding: 10px 20px;
+    color: black;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
+input[type="button"]:active{
+    background: rgb(255, 140, 9);
+}

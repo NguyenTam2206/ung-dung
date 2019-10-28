@@ -1,0 +1,72 @@
+.tablebox {
+    margin-top: 50px;
+}
+
+.editbtn:hover {
+    cursor: pointer;
+}
+
+.editbtn {
+    display: flexbox;
+}
+
+.them,.sua,.xoa {
+    background-color: green;
+    border-radius: 5px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    padding-left: 20px;
+    padding-right: 20px;
+    color: white;
+}
+
+.them:hover {
+    background-color: forestgreen;
+    color: white;
+}
+
+.sua:hover {
+    background-color: lightsalmon;
+    color: white
+}
+
+.sua {
+    margin-right: 10px;
+    background-color: orange;
+}
+
+.them{
+    background-color: green;
+}
+
+.xoa {
+    background-color: red;
+}
+
+.xoa:hover {
+    background-color: orangered;
+    color: white;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+th, td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    height: 50px;
+    text-align: left;
+}
+  
+tr:hover {
+    background-color:#f5f5f5;
+}
+
+
+
+
+
+

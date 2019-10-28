@@ -1,0 +1,72 @@
+.thembox {
+    border: solid 1px #323232;
+    border-radius: 10px;
+    border-top: none;
+    
+}
+
+.themboxhead {
+    background-color: #323232;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    height: 40px;
+    color: white;
+    text-align: center;
+    padding-top: 5px;
+    font-size: 20px;
+}
+
+.closebtn {
+    float: right;
+    color: white;
+    text-decoration: none;
+}
+
+.closebtn:hover {
+    cursor: pointer;
+    text-decoration: none;
+    opacity: .65;
+    color: white
+}
+
+form {
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+.input {
+    width: 100%;
+    height: 30px;
+    margin-top: 5px;
+}
+
+.thembtn {
+    color: white;
+    background-color: green;
+    border: none;
+    border-radius: 5px;
+    margin-top: 15px;
+    padding: 5px 20px;
+}
+
+.thembtn:hover {
+    background-color: forestgreen;
+}
+
+.thongbaoloi {
+    display: block;
+    background-color: orange;
+    color: white;
+    height: 30px;
+    padding-top: 5px;
+    margin-bottom: 15px;
+}
+
+.thongbaothanhcong {
+    display: block;
+    background-color: green;
+    color: white;
+    height: 30px;
+    padding-top: 5px;
+    margin-bottom: 15px;
+}

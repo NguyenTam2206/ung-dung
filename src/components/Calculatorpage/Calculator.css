@@ -1,0 +1,22 @@
+.btnaction {
+    background-color: rgb(255, 140, 9) !important;
+}
+
+.mainCalc{
+    margin-top: 100px;
+    padding:0px;
+    border-radius: 0px;
+    box-sizing: border-box;
+}
+
+.frame {
+    text-align: left;
+}
+
+.calbg {
+    background-image: url(../../calbg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 1000px;
+}

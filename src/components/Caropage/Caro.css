@@ -1,0 +1,29 @@
+.carobg {
+    background-image: url(../../calbg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 1000px;
+}
+
+.game {
+    margin-top: 100px;
+}
+
+.game div {
+    font-size: 30px;
+    color: white;
+}
+
+.reset {
+    background-color: rgba(255, 255, 255, 0.637);
+    border: white;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.reset:hover {
+    background-color: white;
+}
