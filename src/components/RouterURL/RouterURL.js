@@ -9,7 +9,7 @@ const RouterURL = () => {
     return (
         <div>
             <Switch>
-                <Route exact path="/">
+                <Route exact path="/applications">
                     <QLpage />
                 </Route>
                 <Route path="/may-tinh">
