@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "119001571754acf731f7fd741f174a8c",
+    "revision": "b128481aa2f88097cfb80eb71f05c87d",
     "url": "/ung-dung/index.html"
   },
   {
-    "revision": "dbf7a5570a574e079b8b",
+    "revision": "e5d80225c21da1ee6e3f",
     "url": "/ung-dung/static/css/2.65222a67.chunk.css"
   },
   {
-    "revision": "4bfe798f703d68c533eb",
+    "revision": "b45a9cb84d0572e26d7b",
     "url": "/ung-dung/static/css/main.8c44521a.chunk.css"
   },
   {
-    "revision": "dbf7a5570a574e079b8b",
-    "url": "/ung-dung/static/js/2.8795ba33.chunk.js"
+    "revision": "e5d80225c21da1ee6e3f",
+    "url": "/ung-dung/static/js/2.be6cfa0f.chunk.js"
   },
   {
-    "revision": "4bfe798f703d68c533eb",
-    "url": "/ung-dung/static/js/main.158a5366.chunk.js"
+    "revision": "b45a9cb84d0572e26d7b",
+    "url": "/ung-dung/static/js/main.3f7f5787.chunk.js"
   },
   {
     "revision": "0cf184d8de9e667ead20",
