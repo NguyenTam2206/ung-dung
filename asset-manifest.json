@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/ung-dung/static/css/main.56748d4d.chunk.css",
+    "main.css": "/ung-dung/static/css/main.a137cbd5.chunk.css",
     "main.js": "/ung-dung/static/js/main.4efb2636.chunk.js",
     "main.js.map": "/ung-dung/static/js/main.4efb2636.chunk.js.map",
     "runtime-main.js": "/ung-dung/static/js/runtime-main.528eb22d.js",
@@ -9,10 +9,10 @@
     "static/js/2.be6cfa0f.chunk.js": "/ung-dung/static/js/2.be6cfa0f.chunk.js",
     "static/js/2.be6cfa0f.chunk.js.map": "/ung-dung/static/js/2.be6cfa0f.chunk.js.map",
     "index.html": "/ung-dung/index.html",
-    "precache-manifest.197668243746021c9e30ca13aaf79fe8.js": "/ung-dung/precache-manifest.197668243746021c9e30ca13aaf79fe8.js",
+    "precache-manifest.6a19713cc475c17618fc710112a4b407.js": "/ung-dung/precache-manifest.6a19713cc475c17618fc710112a4b407.js",
     "service-worker.js": "/ung-dung/service-worker.js",
     "static/css/2.65222a67.chunk.css.map": "/ung-dung/static/css/2.65222a67.chunk.css.map",
-    "static/css/main.56748d4d.chunk.css.map": "/ung-dung/static/css/main.56748d4d.chunk.css.map",
+    "static/css/main.a137cbd5.chunk.css.map": "/ung-dung/static/css/main.a137cbd5.chunk.css.map",
     "static/media/Caro.css": "/ung-dung/static/media/calbg.1216d857.jpg",
     "static/media/bootstrap.min.css": "/ung-dung/static/media/glyphicons-halflings-regular.fa277232.woff"
   },
@@ -20,7 +20,7 @@
     "static/js/runtime-main.528eb22d.js",
     "static/css/2.65222a67.chunk.css",
     "static/js/2.be6cfa0f.chunk.js",
-    "static/css/main.56748d4d.chunk.css",
+    "static/css/main.a137cbd5.chunk.css",
     "static/js/main.4efb2636.chunk.js"
   ]
 }
