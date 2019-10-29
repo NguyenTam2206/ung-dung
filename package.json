@@ -1,14 +1,13 @@
 {
-  "name": "demo-01",
+  "name": "demo-02",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://nguyentam2206.github.io/applications",
+  "homepage": "https://nguyentam2206.github.io/ung-dung",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.25",
     "@fortawesome/free-solid-svg-icons": "^5.11.2",
     "@fortawesome/react-fontawesome": "^0.1.7",
     "bootstrap": "^3.4.1",
-    "gh-pages": "^2.1.1",
     "react": "^16.11.0",
     "react-dom": "^16.11.0",
     "react-router-dom": "^5.1.2",
@@ -38,6 +37,7 @@
     ]
   },
   "devDependencies": {
-    "@fortawesome/fontawesome-free": "^5.11.2"
+    "@fortawesome/fontawesome-free": "^5.11.2",
+    "gh-pages": "^2.1.1"
   }
 }

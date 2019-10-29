@@ -21,3 +21,13 @@ input[type="button"]{
 input[type="button"]:active{
     background: rgb(255, 140, 9);
 }
+
+@media (max-width: 360px) {
+    input[type="button"]{
+        width: 85px;
+    }
+
+    .screen-row input{
+        width: 255px;
+    }
+}

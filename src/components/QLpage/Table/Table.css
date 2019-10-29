@@ -1,5 +1,7 @@
 .tablebox {
     margin-top: 50px;
+    padding-left: 5px !important;
+    padding-right: 5px !important;
 }
 
 .editbtn:hover {
@@ -15,8 +17,8 @@
     border-radius: 5px;
     padding-top: 3px;
     padding-bottom: 3px;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: 15px;
+    padding-right: 15px;
     color: white;
 }
 
@@ -54,7 +56,7 @@ table {
   }
   
 th, td {
-    padding: 8px;
+    padding: 4px;
     text-align: left;
     border-bottom: 1px solid #ddd;
     height: 50px;
@@ -63,6 +65,17 @@ th, td {
   
 tr:hover {
     background-color:#f5f5f5;
+}
+
+@media (max-width: 320px) {
+    .them,.sua,.xoa {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .sua {
+        margin-right: 5px;
+    }
 }
 
 
