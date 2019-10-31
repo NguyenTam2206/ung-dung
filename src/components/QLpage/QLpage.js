@@ -17,6 +17,7 @@ const QLpage = () => {
         'https://l73di.sse.codesandbox.io/data',
         )
         setState({
+          ...state,
           usersData : res.data
       });
     }
@@ -33,7 +34,8 @@ const QLpage = () => {
   const changeStatusForm = (event) => {
     event.preventDefault();
     setState({
-      statusForm : !state.statusForm
+      statusForm : !state.statusForm,
+      usersData: state.usersData
     })
   }
 
