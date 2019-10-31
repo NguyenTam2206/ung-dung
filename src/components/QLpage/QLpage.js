@@ -1,15 +1,28 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Table from './Table/Table';
 import Form from './Form/Form';
-import myData from '../../data.json';
+import axios from 'axios';
 
 
 const QLpage = () => {
 
   const [ state, setState ] = useState({
     statusForm : false,
-    usersData  : myData
+    usersData  : []
   })
+
+  useEffect(()=> {
+    const fetchData = async () => {
+      const res = await axios(
+        'https://l73di.sse.codesandbox.io/data',
+        )
+        setState({
+          usersData : res.data
+      });
+    }
+      fetchData();
+  }, []);
+
 
   const showForm = () => {
     if (state.statusForm) {
