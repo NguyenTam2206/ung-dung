@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import './Form.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTimesCircle } from '@fortawesome/free-solid-svg-icons';
+const uuidv4 = require('../../../../node_modules/uuid/v4');
 
 const Form = (props) => {
 
@@ -24,11 +25,11 @@ const Form = (props) => {
         event.preventDefault();
         event.target.reset();
         let item = {};
-        item.id = 11;
+        item.id = uuidv4();
         item.username = state.txtUser;
         item.password = state.txtPass;
         item.level = state.sltLevel === 'Thành viên' ? 2 : 1;
-        console.log(item);
+        props.add(item);
     }
     return (
         <div>

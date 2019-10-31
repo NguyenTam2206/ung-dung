@@ -27,7 +27,7 @@ const QLpage = () => {
 
   const showForm = () => {
     if (state.statusForm) {
-      return <Form formToogle = { (event) => changeStatusForm(event) }></Form>
+      return <Form formToogle = { (event) => changeStatusForm(event) } add={ (item) => addAction(item) } ></Form>
     }
   }
 
@@ -38,6 +38,20 @@ const QLpage = () => {
       usersData: state.usersData
     })
   }
+
+
+
+  
+    const addAction = async (item) => {
+      await axios.post('https://l73di.sse.codesandbox.io/data', item)
+      const res = await axios.get(
+        'https://l73di.sse.codesandbox.io/data'
+        )
+        setState({
+          ...state,
+          usersData : res.data
+        })
+    }
 
   return (
     <div>
