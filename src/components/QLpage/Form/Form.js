@@ -1,9 +1,35 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Form.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTimesCircle } from '@fortawesome/free-solid-svg-icons';
 
 const Form = (props) => {
+
+    const [ state,setState ] = useState ({
+        txtUser : '',
+        txtPass : '',
+        sltLevel : 'Thành viên',
+    })
+
+    const changeInput = (event) => {
+        const name = event.target.name;
+        const value = event.target.value;
+        setState({
+            ...state,
+            [name] : value
+        })
+    }
+
+    const submitForm = (event) => {
+        event.preventDefault();
+        event.target.reset();
+        let item = {};
+        item.id = 11;
+        item.username = state.txtUser;
+        item.password = state.txtPass;
+        item.level = state.sltLevel === 'Thành viên' ? 2 : 1;
+        console.log(item);
+    }
     return (
         <div>
             <div className="col-lg-4 visible-lg
@@ -29,13 +55,13 @@ const Form = (props) => {
                         <div className="row">
                             <div className="col-lg-12
                                             col-md-12">
-                                <form action="">
+                                <form method="POST" onSubmit={ (e) => submitForm(e) }>
                                     <span style={{fontSize: '18px'}}>Thành viên</span><br></br>
-                                    <input type="text" name="" placeholder="Nhập ID thành viên" className="input"></input><br></br>
+                                    <input type="text" name="txtUser" onChange={ (e) => changeInput(e)} placeholder="Nhập ID thành viên"  className="input"></input><br></br>
                                     <br></br><span style={{fontSize: '18px'}}>Mật khẩu</span><br></br>
-                                    <input type="password" name="" placeholder="Nhập mật khẩu" className="input"></input><br></br>
+                                    <input type="password" name="txtPass" onChange={ (e) => changeInput(e)} placeholder="Nhập mật khẩu" className="input"></input><br></br>
                                     <br></br><span style={{fontSize: '18px'}}>Quyền</span><br></br>
-                                    <select name="" className="input">
+                                    <select name="sltLevel" className="input" onChange={ (e) => changeInput(e)} value={ state.sltLevel }>
                                         <option value="Thành viên">Thành viên</option>
                                         <option value="Admin">Admin</option>
                                     </select><br></br>
@@ -69,13 +95,13 @@ const Form = (props) => {
                         <div className="row">
                             <div className="col-sm-12
                                             col-xs-12">
-                                <form action="">
+                                <form method="POST" onSubmit={ (e) => submitForm(e) }>
                                     <span style={{fontSize: '18px'}}>Thành viên</span><br></br>
-                                    <input type="text" name="" placeholder="Nhập ID thành viên" className="input"></input><br></br>
+                                    <input type="text" name="txtUser" onChange={ (e) => changeInput(e)} placeholder="Nhập ID thành viên" className="input"></input><br></br>
                                     <br></br><span style={{fontSize: '18px'}}>Mật khẩu</span><br></br>
-                                    <input type="password" name="" placeholder="Nhập mật khẩu" className="input"></input><br></br>
+                                    <input type="password" name="txtPass" onChange={ (e) => changeInput(e)} placeholder="Nhập mật khẩu" className="input"></input><br></br>
                                     <br></br><span style={{fontSize: '18px'}}>Quyền</span><br></br>
-                                    <select name="" className="input">
+                                    <select name="sltLevel" className="input" onChange={ (e) => changeInput(e)} value={ state.sltLevel }>
                                         <option value="Thành viên">Thành viên</option>
                                         <option value="Admin">Admin</option>
                                     </select><br></br>
