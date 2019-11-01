@@ -87,16 +87,9 @@ const Form = (props) => {
                 </div>
             </div>
             <div className="col-sm-12 visible-sm
-                            col-xs-12 visible-xs" style={{marginTop: '20px', position: 'absolute', zIndex: '2'}}>
+                            col-xs-12 visible-xs" style={{marginTop: '20px'}}>
                 <div className="row">
-                    <div className="col-sm-12
-                                    col-xs-12 thongbaoloi">
-                        <b>Lỗi.</b> Vui lòng nhập đầy đủ thông tin
-                    </div>
-                    <div className="col-sm-12
-                                    col-xs-12 thongbaothanhcong">
-                        <b>Đăng kí thành công</b>
-                    </div>
+                    { showNotice() }
                     <div className="col-sm-12
                                     col-xs-12 thembox">
                         <div className="row">
@@ -109,11 +102,11 @@ const Form = (props) => {
                         <div className="row">
                             <div className="col-sm-12
                                             col-xs-12">
-                                <form method="POST" onSubmit={ (e) => submitForm(e) }>
+                                 <form method="POST" onSubmit={ (e) => submitForm(e) }>
                                     <span style={{fontSize: '18px'}}>Thành viên</span><br></br>
-                                    <input type="text" name="txtUser" onChange={ (e) => changeInput(e)} placeholder="Nhập ID thành viên" className="input"></input><br></br>
+                                    <input type="text" name="txtUser" onChange={ (e) => changeInput(e)} placeholder="Nhập ID thành viên"  className="input" required minLength="5"></input><br></br>
                                     <br></br><span style={{fontSize: '18px'}}>Mật khẩu</span><br></br>
-                                    <input type="password" name="txtPass" onChange={ (e) => changeInput(e)} placeholder="Nhập mật khẩu" className="input"></input><br></br>
+                                    <input type="password" name="txtPass" onChange={ (e) => changeInput(e)} placeholder="Nhập mật khẩu" className="input" required minLength="5"></input><br></br>
                                     <br></br><span style={{fontSize: '18px'}}>Quyền</span><br></br>
                                     <select name="sltLevel" className="input" onChange={ (e) => changeInput(e)} value={ state.sltLevel }>
                                         <option value="Thành viên">Thành viên</option>
@@ -123,6 +116,7 @@ const Form = (props) => {
                                 </form>
                             </div>
                         </div>
+                        <span id="themboxmobile"></span>
                     </div>
                 </div>
             </div>

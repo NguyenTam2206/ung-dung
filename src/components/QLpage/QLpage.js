@@ -69,9 +69,13 @@ const QLpage = () => {
   return (
     <div>
       <div className="container">
-        <div className="row">
+        <div className="row visble-lg visible-md">
           <Table  onDeleteClicked={(deleteID) => deleteAction(deleteID)} usersData={state.usersData} statusForm={ state.statusForm } formToogle = { (event) => changeStatusForm(event) }></Table>
           { showForm() }
+        </div>
+        <div className="row visible-sm visible-xs">
+          { showForm() }
+          <Table  onDeleteClicked={(deleteID) => deleteAction(deleteID)} usersData={state.usersData} statusForm={ state.statusForm } formToogle = { (event) => changeStatusForm(event) }></Table>
         </div>
       </div>
     </div>
