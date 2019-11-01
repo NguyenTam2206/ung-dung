@@ -1,4 +1,5 @@
-[
+{
+    "data" : [
     {
         "id"        : 1,
         "username"  : "nguyentam2206",
@@ -60,3 +61,4 @@
         "level"     : 1
     }
 ]
+}

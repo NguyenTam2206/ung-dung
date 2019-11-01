@@ -53,11 +53,24 @@ const QLpage = () => {
         })
     }
 
+   
+
+    const deleteAction = async (deleteID) => {
+      await axios.delete(`https://l73di.sse.codesandbox.io/data/${deleteID}`)
+      const res = await axios.get(
+        'https://l73di.sse.codesandbox.io/data'
+        )
+        setState({
+          ...state,
+          usersData : res.data
+        })
+    }
+
   return (
     <div>
       <div className="container">
         <div className="row">
-          <Table usersData={state.usersData} statusForm={ state.statusForm } formToogle = { (event) => changeStatusForm(event) }></Table>
+          <Table  onDeleteClicked={(deleteID) => deleteAction(deleteID)} usersData={state.usersData} statusForm={ state.statusForm } formToogle = { (event) => changeStatusForm(event) }></Table>
           { showForm() }
         </div>
       </div>
