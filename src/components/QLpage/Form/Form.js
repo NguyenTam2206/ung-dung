@@ -116,7 +116,6 @@ const Form = (props) => {
                                 </form>
                             </div>
                         </div>
-                        <span id="themboxmobile"></span>
                     </div>
                 </div>
             </div>
