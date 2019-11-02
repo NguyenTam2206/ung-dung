@@ -66,16 +66,37 @@ const QLpage = () => {
         })
     }
 
+    const changeAction = async (changeID) => {
+      await axios({
+        method: 'put',
+        url: `https://l73di.sse.codesandbox.io/data/${changeID}`,
+        data: {
+          username: 'Fred',
+          password  : "123456",
+          level    : 1
+        }
+      });
+      const res = await axios.get(
+        'https://l73di.sse.codesandbox.io/data'
+        )
+        setState({
+          ...state,
+          usersData : res.data
+        })
+    }
+
+
+
   return (
     <div>
       <div className="container">
-        <div className="row visble-lg visible-md">
-          <Table  onDeleteClicked={(deleteID) => deleteAction(deleteID)} usersData={state.usersData} statusForm={ state.statusForm } formToogle = { (event) => changeStatusForm(event) }></Table>
+        <div className="row visible-lg visible-md">
+          <Table  onChangeClicked ={(changeID) => changeAction(changeID)} onDeleteClicked={(deleteID) => deleteAction(deleteID)} usersData={state.usersData} statusForm={ state.statusForm } formToogle = { (event) => changeStatusForm(event) }></Table>
           { showForm() }
         </div>
         <div className="row visible-sm visible-xs">
           { showForm() }
-          <Table  onDeleteClicked={(deleteID) => deleteAction(deleteID)} usersData={state.usersData} statusForm={ state.statusForm } formToogle = { (event) => changeStatusForm(event) }></Table>
+          <Table  onChangeClicked ={(changeID) => changeAction(changeID)} onDeleteClicked={(deleteID) => deleteAction(deleteID)} usersData={state.usersData} statusForm={ state.statusForm } formToogle = { (event) => changeStatusForm(event) }></Table>
         </div>
       </div>
     </div>
