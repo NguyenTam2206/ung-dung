@@ -8,13 +8,13 @@ const QLpage = () => {
 
   const [ state, setState ] = useState({
     statusForm : false,
-    usersData  : []
+    usersData  : [],
   })
 
   useEffect(()=> {
     const fetchData = async () => {
       const res = await axios(
-        'https://l73di.sse.codesandbox.io/data',
+        'http://5dbcda0030411e0014f27177.mockapi.io/api/users',
         )
         setState({
           ...state,
@@ -34,18 +34,16 @@ const QLpage = () => {
   const changeStatusForm = (event) => {
     event.preventDefault();
     setState({
+      ...state,
       statusForm : !state.statusForm,
-      usersData: state.usersData
+      statusChangeForm : false
     })
   }
 
-
-
-  
     const addAction = async (item) => {
-      await axios.post('https://l73di.sse.codesandbox.io/data', item)
+      await axios.post('http://5dbcda0030411e0014f27177.mockapi.io/api/users', item)
       const res = await axios.get(
-        'https://l73di.sse.codesandbox.io/data'
+        'http://5dbcda0030411e0014f27177.mockapi.io/api/users'
         )
         setState({
           ...state,
@@ -56,47 +54,34 @@ const QLpage = () => {
    
 
     const deleteAction = async (deleteID) => {
-      await axios.delete(`https://l73di.sse.codesandbox.io/data/${deleteID}`)
+      await axios.delete(`http://5dbcda0030411e0014f27177.mockapi.io/api/users/${deleteID}`)
       const res = await axios.get(
-        'https://l73di.sse.codesandbox.io/data'
+        'http://5dbcda0030411e0014f27177.mockapi.io/api/users'
         )
         setState({
           ...state,
-          usersData : res.data
+          usersData : res.data,
+          statusChangeForm : false
         })
     }
-
-    const changeAction = async (changeID) => {
-      await axios({
-        method: 'put',
-        url: `https://l73di.sse.codesandbox.io/data/${changeID}`,
-        data: {
-          username: 'Fred',
-          password  : "123456",
-          level    : 1
-        }
-      });
-      const res = await axios.get(
-        'https://l73di.sse.codesandbox.io/data'
-        )
-        setState({
-          ...state,
-          usersData : res.data
-        })
-    }
-
+    // https://5uj9g.sse.codesandbox.io/data
 
 
   return (
     <div>
       <div className="container">
         <div className="row visible-lg visible-md">
-          <Table  onChangeClicked ={(changeID) => changeAction(changeID)} onDeleteClicked={(deleteID) => deleteAction(deleteID)} usersData={state.usersData} statusForm={ state.statusForm } formToogle = { (event) => changeStatusForm(event) }></Table>
+          <Table  
+                  onDeleteClicked={(deleteID) => deleteAction(deleteID)} 
+                  usersData={state.usersData} 
+                  statusForm={ state.statusForm } 
+                  formToogle = { (event) => changeStatusForm(event) }>
+          </Table>
           { showForm() }
         </div>
         <div className="row visible-sm visible-xs">
           { showForm() }
-          <Table  onChangeClicked ={(changeID) => changeAction(changeID)} onDeleteClicked={(deleteID) => deleteAction(deleteID)} usersData={state.usersData} statusForm={ state.statusForm } formToogle = { (event) => changeStatusForm(event) }></Table>
+          <Table  onDeleteClicked={(deleteID) => deleteAction(deleteID)} usersData={state.usersData} statusForm={ state.statusForm } formToogle = { (event) => changeStatusForm(event) }></Table>
         </div>
       </div>
     </div>

@@ -3,7 +3,6 @@ import './Table.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlus } from '@fortawesome/free-solid-svg-icons';
 import { faTrash } from '@fortawesome/free-solid-svg-icons';
-import { faEdit } from '@fortawesome/free-solid-svg-icons';
 import { faTimesCircle } from '@fortawesome/free-solid-svg-icons';
 
 const Table = (props) => {
@@ -31,18 +30,13 @@ const Table = (props) => {
                             <td style={{paddingLeft: '8px'}}>{ key + 1 }</td>
                             <td>{ value.username }</td>
                             <td>{ value.level === 1 ? 'Admin' : 'Nhân viên' }</td>
-                            <td style={{textAlign: 'center', paddingLeft: '0px', paddingRight: '0px'}}>
-                                <a className="editbtn sua" onClick ={ () => showChangeID(value.id)}><FontAwesomeIcon icon={faEdit} /></a>
+                            <td style={{textAlign: 'center', paddingLeft: '0px', paddingRight: '0px'}}>    
                                 <a className="editbtn xoa" onClick = { () => showID(value.id) }><FontAwesomeIcon icon={faTrash} /></a>
                             </td>
                         </tr> 
                     ); 
         });
             return tableRow;
-    }
-
-    const showChangeID = (changeID) => {
-        props.onChangeClicked(changeID)
     }
 
     const showID = (deleteID) => {
