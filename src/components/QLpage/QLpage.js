@@ -14,7 +14,7 @@ const QLpage = () => {
   useEffect(()=> {
     const fetchData = async () => {
       const res = await axios(
-        'http://5dbcda0030411e0014f27177.mockapi.io/api/users',
+        'https://5dbcda0030411e0014f27177.mockapi.io/api/users',
         )
         setState({
           ...state,
@@ -41,9 +41,9 @@ const QLpage = () => {
   }
 
     const addAction = async (item) => {
-      await axios.post('http://5dbcda0030411e0014f27177.mockapi.io/api/users', item)
+      await axios.post('https://5dbcda0030411e0014f27177.mockapi.io/api/users', item)
       const res = await axios.get(
-        'http://5dbcda0030411e0014f27177.mockapi.io/api/users'
+        'https://5dbcda0030411e0014f27177.mockapi.io/api/users'
         )
         setState({
           ...state,
@@ -54,9 +54,9 @@ const QLpage = () => {
    
 
     const deleteAction = async (deleteID) => {
-      await axios.delete(`http://5dbcda0030411e0014f27177.mockapi.io/api/users/${deleteID}`)
+      await axios.delete(`https://5dbcda0030411e0014f27177.mockapi.io/api/users/${deleteID}`)
       const res = await axios.get(
-        'http://5dbcda0030411e0014f27177.mockapi.io/api/users'
+        'https://5dbcda0030411e0014f27177.mockapi.io/api/users'
         )
         setState({
           ...state,
